@@ -1,0 +1,23 @@
+"""
+ def create_faiss_index(embeddings):
+   dimension = embeddings.shape[1]
+   M = 16  # Number of connections per node (higher = more accurate but slower)
+   index = faiss.IndexHNSWFlat(dimension, M)  # Use HNSW with L2 distance
+    
+    # Add embeddings to the index
+   index.add(embeddings)
+    return index"""
+
+"""
+def create_faiss_index(embeddings):
+    dimension = embeddings.shape[1]
+    nlist = 100  # Number of clusters
+    quantizer = faiss.IndexFlatL2(dimension)  # Use L2 distance for quantization
+    index = faiss.IndexIVFFlat(quantizer, dimension, nlist)
+    
+    # Train the index on the data
+    index.train(embeddings)
+    
+    # Add embeddings to the index
+    index.add(embeddings)
+    return index"""
