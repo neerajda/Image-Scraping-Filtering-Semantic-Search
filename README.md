@@ -55,11 +55,7 @@ streamlit run st.py
 - Adjust `is_advertisement()` logic to fine-tune ad filtering.
 - Change `CLIPProcessor` settings for different embedding behavior.
 
-## Future Enhancements
-- Improve advertisement detection with a custom-trained model.
-- Add multi-threading for faster image processing.
-- Implement real-time web scraping with dynamic content handling.
-- Extend to video frame analysis.
+
 
 
 
